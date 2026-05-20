@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Victor — Desenvolvedor web e estudante de Sistemas de Informação.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfólio | Victor</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="brand">Victor</div>
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero" id="home">
+
+      <figure class="foto">
+        <img src="victor.jpeg" alt="Foto do Victor">
+      </figure>
+
+      <div class="texto">
+
+        <h1>Olá, me chamo Victor</h1>
+
+        <h2>
+          Estudante de Sistemas de Informação • UNIFEBE
+        </h2>
+
+        <p>
+          Sou de Brusque (SC), tenho 18 anos e atualmente
+          estou cursando Sistemas de Informação na UNIFEBE.
+          Sempre gostei da área da tecnologia e, desde cedo,
+          me considero um verdadeiro entusiasta quando o assunto
+          é inovação, programação e desenvolvimento.
+        </p>
+
+        <a href="#contato" class="btn">
+          Entrar em Contato
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section id="sobre" class="sobre reveal">
+
+      <h2 class="titulo">Sobre Mim</h2>
+
+      <p>
+        Estou constantemente buscando aprender novas tecnologias,
+        desenvolver minhas habilidades e crescer cada vez mais
+        na área da tecnologia.
+        Tenho interesse principalmente em desenvolvimento web,
+        programação e inovação.
+      </p>
+
+    </section>
+
+    <!-- Seção de Projetos removida conforme solicitado -->
+
+    <section id="contato" class="reveal">
+
+      <h2 class="titulo">Contato</h2>
+
+      <p>Email: hugoluz2007vhl@gmail.com</p>
+
+      <p>Celular: <a href="tel:+5547988256630">(47) 98825-6630</a></p>
+
+      <p>GitHub: <a href="https://github.com/victorluzyx" target="_blank" rel="noopener">github.com/victorluzyx</a></p>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    © 2026 - Victor | Todos os direitos reservados
+
+  </footer>
+
+  <script>
+    (function(){
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const obs = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.12});
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    })();
+  </script>
+
+</body>
+</html>
